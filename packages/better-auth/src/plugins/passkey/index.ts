@@ -522,6 +522,7 @@ export const passkey = (options?: PasskeyOptions) => {
 							expectedChallenge,
 							expectedOrigin: origin,
 							expectedRPID: options?.rpID,
+							requireUserVerification: false,
 						});
 						const { verified, registrationInfo } = verification;
 						if (!verified || !registrationInfo) {
@@ -647,6 +648,7 @@ export const passkey = (options?: PasskeyOptions) => {
 							expectedChallenge,
 							expectedOrigin: origin,
 							expectedRPID: opts.rpID,
+							requireUserVerification: false,
 							authenticator: {
 								credentialID: passkey.id,
 								credentialPublicKey: new Uint8Array(
